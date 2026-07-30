@@ -1,0 +1,5 @@
+### GET for testing root
+GET {{BaseURL}}/
+Accept: application/json
+
+###
