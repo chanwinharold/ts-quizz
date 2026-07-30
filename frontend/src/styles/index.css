@@ -73,6 +73,7 @@
   --spacing-gutter: var(--spacing-gutter);
   --spacing-margin-mobile: var(--spacing-margin-mobile);
   --spacing-margin-desktop: var(--spacing-margin-desktop);
+  --spacing-max-screen: var(--spacing-max-screen);
 }
 
 :root {
@@ -177,6 +178,7 @@
   --spacing-gutter: 24px;
   --spacing-margin-mobile: 16px;
   --spacing-margin-desktop: 40px;
+  --spacing-max-screen: 1440px;
 }
 
 body {
