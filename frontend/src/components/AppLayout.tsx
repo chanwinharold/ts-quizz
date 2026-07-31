@@ -7,7 +7,9 @@ function AppLayout(): React.JSX.Element {
     return (
         <>
             <Navbar />
-            <Outlet />
+            <main className={`min-h-[75vh] max-w-max-screen m-auto p-8`}>
+                <Outlet />
+            </main>
             <Footer />
         </>
     );
