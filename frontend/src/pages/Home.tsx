@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {Categories} from "../config.ts";
 import {Category} from "../components/Category.tsx";
 import DifficultySelector, {type Difficulty} from "../components/DifficultySelector.tsx";
+import BtnPrimary from "../components/BtnPrimary.tsx";
 
 
 function Home(): React.JSX.Element {
@@ -25,6 +26,7 @@ function Home(): React.JSX.Element {
                 {
                     Categories.map(c => (
                         <Category
+                            key={`${c.name.toLowerCase()}-${c.id}`}
                             id={c.id}
                             image={c.image}
                             name={c.name}
@@ -32,6 +34,9 @@ function Home(): React.JSX.Element {
                         />
                     ))
                 }
+            </div>
+            <div className={`w-fit m-auto`}>
+                <BtnPrimary className={`text-surface-tint hover:text-white cursor-pointer border-inverse-primary hover:bg-on-primary shadow-surface-bright hover:shadow-inverse-primary bg-primary-container`} type={"submit"}>Start Quiz</BtnPrimary>
             </div>
         </div>
     );
