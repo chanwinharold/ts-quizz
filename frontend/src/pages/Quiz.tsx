@@ -3,6 +3,7 @@ import { Progress } from "../../components/ui/progress";
 import { ArrowRight } from 'lucide-react';
 import BtnPrimary from "../components/BtnPrimary.tsx";
 
+
 function Quiz(): React.JSX.Element {
     const [number, ] = useState(5);
     const [currentQuestion, ] = useState("Who is the best basket ball player of all time ?")
@@ -44,7 +45,7 @@ function Quiz(): React.JSX.Element {
                 </label>
             </section>
 
-            <BtnPrimary className={`inline-flex justify-center items-center gap-2 justify-self-end text-on-tertiary-fixed-variant hover:text-on-tertiary-fixed cursor-pointer hover:border-on-tertiary hover:bg-tertiary shadow-surface-bright hover:shadow-on-tertiary bg-primary border-primary`}>Next question <ArrowRight /></BtnPrimary>
+            <BtnPrimary className={`inline-flex justify-center items-center gap-2 justify-self-end btn-secondary`}>Next question <ArrowRight /></BtnPrimary>
         </div>
     );
 }

@@ -36,7 +36,7 @@ function Home(): React.JSX.Element {
                 }
             </div>
             <div className={`w-fit m-auto`}>
-                <BtnPrimary className={`text-surface-tint hover:text-white cursor-pointer border-inverse-primary hover:bg-on-primary shadow-surface-bright hover:shadow-inverse-primary bg-primary-container`} type={"submit"}>Start Quiz</BtnPrimary>
+                <BtnPrimary className={`btn-primary`}>Start Quiz</BtnPrimary>
             </div>
         </div>
     );

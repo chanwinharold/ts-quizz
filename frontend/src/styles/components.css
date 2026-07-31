@@ -2,6 +2,7 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
+@import "index.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -11,6 +12,16 @@
         font-size: var(--headline-md-font-size);
         font-weight: var(--headline-md-font-weight);
         line-height: var(--headline-md-line-height);
+    }
+    .btn-primary {
+        @apply text-surface-tint hover:text-white
+        cursor-pointer border-inverse-primary hover:bg-on-primary
+        shadow-surface-bright hover:shadow-inverse-primary bg-primary-container;
+    }
+    .btn-secondary {
+        @apply text-on-tertiary-fixed-variant hover:text-on-tertiary-fixed cursor-pointer
+        hover:border-on-tertiary hover:bg-tertiary shadow-surface-bright
+        hover:shadow-on-tertiary bg-primary border-primary;
     }
 }
 
@@ -46,16 +57,4 @@
     --sidebar-accent-foreground: oklch(0.985 0 0);
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.556 0 0);
-}
-
-@layer base {
-    * {
-        @apply border-border outline-ring/50;
-    }
-    body {
-        @apply bg-background text-foreground;
-    }
-    html {
-        @apply font-sans;
-    }
 }
