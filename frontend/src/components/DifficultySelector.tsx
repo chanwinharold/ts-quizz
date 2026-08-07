@@ -1,6 +1,7 @@
 import { useState } from "react";
+import type { Difficulty } from "../types/question.ts";
 
-export type Difficulty = "Easy" | "Medium" | "Hard";
+export type { Difficulty };
 
 interface DifficultySelectorProps {
     defaultValue?: Difficulty;
@@ -28,8 +29,6 @@ export default function DifficultySelector({
         onChange?.(d);
     };
 
-    // const { activeColor, glowColor } = DIFFICULTY_CONFIG[selected];
-
     return (
         <div
             style={{
@@ -50,6 +49,7 @@ export default function DifficultySelector({
                 return (
                     <button
                         key={d}
+                        type="button"
                         onClick={() => handleSelect(d)}
                         onMouseEnter={() => setHovered(d)}
                         onMouseLeave={() => setHovered(null)}
@@ -84,45 +84,6 @@ export default function DifficultySelector({
                     </button>
                 );
             })}
-
-            {/* Subtle indicator bar below selected button (optional visual touch) */}
-            <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
-      `}</style>
         </div>
     );
 }
-
-// /* ─── Demo wrapper ──────────────────────────────────────────────────── */
-//
-// export function DifficultyDemo() {
-//   const [value, setValue] = useState<Difficulty>("Medium");
-//
-//   return (
-//     <div
-//       style={{
-//         minHeight: "100vh",
-//         display: "flex",
-//         flexDirection: "column",
-//         alignItems: "center",
-//         justifyContent: "center",
-//         gap: 24,
-//         backgroundColor: "#0d0c1a",
-//         fontFamily: "'Inter', sans-serif",
-//       }}
-//     >
-//       <DifficultySelector defaultValue="Medium" onChange={setValue} />
-//       <p style={{ color: "rgba(255,255,255,0.3)", fontSize: 13, margin: 0 }}>
-//         Selected:{" "}
-//         <span
-//           style={{
-//             color: DIFFICULTY_CONFIG[value].activeColor,
-//             fontWeight: 600,
-//           }}
-//         >
-//           {value}
-//         </span>
-//       </p>
-//     </div>
-//   );
-// }

@@ -1,9 +1,11 @@
-import React from "react";
-import type {LucideProps} from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+
+export type CategorySlug = "science" | "history" | "tech" | "pop-culture";
 
 export type Category = {
-    id: number,
-    image: React.ForwardRefExoticComponent<Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>>,
-    name: string,
-    description: string
-}
+    id: number;
+    slug: CategorySlug;
+    image: LucideIcon;
+    name: string;
+    description: string;
+};

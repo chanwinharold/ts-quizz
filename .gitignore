@@ -1,2 +1,17 @@
+# Editor
 .idea
+.vscode
+
+# Dependencies
 node_modules
+
+# Environment
+.env
+
+# Build output
+frontend/dist
+frontend/dist-ssr
+
+# Logs
+*.log
+logs
