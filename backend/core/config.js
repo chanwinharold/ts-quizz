@@ -1,7 +1,9 @@
-const PORT = process.env.PORT
-const HOST = process.env.HOST
+const PORT = process.env.PORT || 3000;
+const HOST = process.env.HOST || "localhost";
+const CORS_ORIGIN = process.env.CORS_ORIGIN || "*";
 
 module.exports = {
     PORT,
-    HOST
-}
+    HOST,
+    CORS_ORIGIN,
+};

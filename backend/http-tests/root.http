@@ -1,5 +1,19 @@
-### GET for testing root
-GET {{BaseURL}}/
+### GET /api/health
+GET {{BaseURL}}/api/health
 Accept: application/json
 
-###
+### GET /api/categories
+GET {{BaseURL}}/api/categories
+Accept: application/json
+
+### GET /api/questions (science / Easy)
+GET {{BaseURL}}/api/questions?category=science&difficulty=Easy
+Accept: application/json
+
+### GET /api/questions (invalid category)
+GET {{BaseURL}}/api/questions?category=unknown
+Accept: application/json
+
+### GET unknown API route
+GET {{BaseURL}}/api/does-not-exist
+Accept: application/json

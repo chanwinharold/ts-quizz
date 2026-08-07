@@ -7,7 +7,7 @@ type BtnPrimaryProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 function BtnPrimary({ children, className = "", ...props }: BtnPrimaryProps) {
     return (
         <button
-            className={`w-56 h-10 rounded-xl shadow-2xl border-2 transition-all duration-300 text-md font-semibold ${className}`}
+            className={`w-56 h-10 rounded-xl shadow-2xl border-2 transition-all duration-300 text-base font-semibold ${className}`}
             {...props}
         >
             {children}
